@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <div class="slds-form-element">
+            <div class="slds-text-heading_medium ">Add Buildings</div>
+        </div>
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Name" value={getBuildingRecord.Name} onchange={nameInpChange}></lightning-input>
+        </p>    
+
+        
+
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Address" value={getBuildingRecord.Address__c} onchange={addressInpChange}></lightning-input>
+        </p>
+        <div class="slds-m-around_medium">
+      
+            <div class="slds-m-bottom_small">
+                <lightning-input type="text"
+                   value={searchValue}
+                   label="search"
+                   onchange={searchKeyword}
+                   ></lightning-input>
+             </div>
+             
+             <lightning-button label="Search"
+                onclick={handleSearchKeyword}
+                variant="brand"></lightning-button>
+            </div>
+        <div>
+            <lightning-button label="Submit" onclick={saveBuildingAction} variant="brand"></lightning-button>
+          </div>
+         
+</lightning-card>
+</template>
